@@ -1,0 +1,4 @@
+name: MyRestAPI
+services:
+  app:
+    build: ./app
