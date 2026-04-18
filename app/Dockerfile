@@ -6,10 +6,11 @@ WORKDIR /app
 
 COPY ./external ./external
 COPY ./src ./src
+COPY ./includes ./includes
 COPY ./CMakeLists.txt .
+COPY ./Makefile .
 
-RUN cmake -S. -Bbuild
-RUN cmake --build build
+RUN make build
 
 
 FROM alpine:3.23

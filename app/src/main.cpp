@@ -1,4 +1,4 @@
-#include "crow.h"
+#include <crow/app.h>
 
 int main () {
     crow::SimpleApp app;

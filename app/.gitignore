@@ -1,1 +1,6 @@
 external/
+build/
+bin/
+.cache/
+CMakeCache.txt
+CMakeFiles/

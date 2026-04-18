@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project (my_rest_api LANGUAGES CXX)
+project(my_rest_api LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -26,3 +26,10 @@ target_include_directories(Crow INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/external/c
 target_link_libraries(Crow INTERFACE asio)
 target_link_libraries(app PUBLIC Crow)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+
+# TODO: Don't generate tests in production environment
+enable_testing()
+add_subdirectory(external/googletest)
+add_subdirectory(tests)
